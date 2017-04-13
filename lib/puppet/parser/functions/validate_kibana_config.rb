@@ -13,6 +13,8 @@ module Puppet::Parser::Functions
 
     config = args[0]
 
+    puts config.inspect
+
     # check config is a hash
     unless config.is_a?(Hash)
       raise Puppet::ParseError, "validate_kibana_config(): #{config.inspect} is not a Hash.  It looks to be a #{config.class}"
